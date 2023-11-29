@@ -2,7 +2,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Identity;
 using YetgenAkbankJump.Domain.Identity;
 using Microsoft.EntityFrameworkCore;
-using YetgenAkbankJump.Persistence.Contexts;
+using YetgenAkbankJump.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,9 +15,9 @@ var connectionString = builder.Configuration.GetSection("YetgenPostgreSQLDB").Va
 
 
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<YetgenIdentityContext>(options =>
 {
-    options.UseNpgsql(connectionString);
+    options.UseInMemoryDatabase("sudeopanweek11");
 });
 
 builder.Services.AddSession();

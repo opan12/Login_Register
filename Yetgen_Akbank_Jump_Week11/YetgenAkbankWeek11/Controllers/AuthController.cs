@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using NToastNotify;
 using YetgenAkbankJump.Domain.Identity;
 using YetgenAkbankWeek11.WebApi.ViewModels;
 
